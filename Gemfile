@@ -13,7 +13,10 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
-
+  gem 'bootstrap-sass', github: 'willnet/bootstrap-sass'
+  gem 'compass-rails'
+  gem 'zurui-sass-rails'
+  gem 'font-awesome-sass-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
