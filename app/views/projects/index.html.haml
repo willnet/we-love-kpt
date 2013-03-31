@@ -1,0 +1,6 @@
+= link_to 'new project', new_project_path, class: 'btn btn-primary'
+
+%ul.projects
+  - @projects.each do |project|
+    %li
+      = link_to project.name, project_path(project)

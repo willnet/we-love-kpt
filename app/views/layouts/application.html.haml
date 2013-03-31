@@ -15,8 +15,8 @@
           .nav-collapse
             %ul.nav
               %li
-                %a{href: '/'}
-                  dummy
+                = link_to 'projects', projects_path
     <a href="https://github.com/willnet/we-love-kpt"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
     .container
+      = flash_messages
       = yield
