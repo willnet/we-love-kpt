@@ -1,6 +1,6 @@
 # README
 
-"we love KPT" is a web application for internal use.
+"we love KPT" is a web application which manage KPT for internal use.
 
 ## License
 
