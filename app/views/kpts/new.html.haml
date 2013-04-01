@@ -1,0 +1,13 @@
+%h2= @project.name
+
+= form_for [@project, @kpt], html: { class: 'form-horizontal'} do |f|
+  %fieldset
+    %legend
+      new KPT
+    = render 'errors', model: @kpt
+    .control-group
+      = f.label :name, class: 'control-label'
+      .controls
+        = f.text_field :name
+    .control-group.form-actions
+      = f.submit 'Create KPT', class: 'btn'

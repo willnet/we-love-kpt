@@ -1,0 +1,2 @@
+class Problem < Post
+end

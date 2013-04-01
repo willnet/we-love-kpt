@@ -1,0 +1,2 @@
+class Keep < Post
+end

@@ -1,1 +1,7 @@
-= @project.name
+=link_to 'new KPT', new_project_kpt_path(@project), class: 'btn btn-success'
+%h2= @project.name
+%ul.kpts
+  - @kpts.each do |kpt|
+    %li
+      = link_to kpt.name, project_kpt_path(@project, kpt)
+

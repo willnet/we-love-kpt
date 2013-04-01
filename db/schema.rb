@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130331084457) do
+ActiveRecord::Schema.define(version: 20130331145214) do
+
+  create_table "kpts", force: true do |t|
+    t.integer  "project_id"
+    t.string   "name",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "kpts", ["project_id"], name: "index_kpts_on_project_id"
+
+  create_table "posts", force: true do |t|
+    t.integer  "kpt_id"
+    t.string   "type",       null: false
+    t.string   "body",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["kpt_id"], name: "index_posts_on_kpt_id"
 
   create_table "projects", force: true do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
